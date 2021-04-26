@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="331.0" prefWidth="555.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <Button fx:id="startButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#ClickStart" prefHeight="25.0" prefWidth="60.0" text="Start" />
+        <Button fx:id="stopButton" layoutX="87.0" layoutY="14.0" mnemonicParsing="false" onAction="#ClickStop" prefWidth="60.0" text="Stop" />
+        <Button fx:id="quitButton" layoutX="15.0" layoutY="47.0" mnemonicParsing="false" onAction="#ClickQuit" prefWidth="60.0" text="Quit" />
+        <ChoiceBox fx:id="keuze" layoutX="273.0" layoutY="14.0" prefHeight="25.0" prefWidth="100.0" />
+        <Label layoutX="181.0" layoutY="18.0" text="Update Interval:" />
+        <TableView fx:id="coinTable" layoutX="14.0" layoutY="81.0" prefHeight="250.0" prefWidth="522.0">
+            <columns>
+                <TableColumn fx:id="symbol" editable="false" prefWidth="50.0" resizable="false" text="Symbol" />
+                <TableColumn fx:id="value" editable="false" prefWidth="60.0" resizable="false" style="-fx-alignment: center-right;" text="Value" />
+                <TableColumn fx:id="low24h" editable="false" prefWidth="60.0" resizable="false" sortable="false" style="-fx-alignment: center-right;" text="Low24H" />
+                <TableColumn fx:id="high24h" editable="false" prefWidth="60.0" resizable="false" sortable="false" style="-fx-alignment: center-right;" text="High24H" />
+                <TableColumn fx:id="ath" editable="false" prefWidth="60.0" resizable="false" sortable="false" style="-fx-alignment: center-right;" text="ATH" />
+                <TableColumn fx:id="daysago" editable="false" prefWidth="60.0" resizable="false" style="-fx-alignment: center-right;" text="Days ago" />
+            <TableColumn fx:id="ptoath" prefWidth="90.0" style="-fx-alignment: center-right;" text="\%toATH" />
+            <TableColumn fx:id="pfromath" prefWidth="70.0" style="-fx-alignment: center-right;" text="\%fromATH" />
+            </columns>
+        </TableView>
+      <Label layoutX="181.0" layoutY="51.0" text="Currency:" />
+      <ChoiceBox fx:id="currencychoice" layoutX="240.0" layoutY="47.0" prefHeight="25.0" prefWidth="84.0" />
+    </children>
+</AnchorPane>
